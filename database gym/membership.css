@@ -1,0 +1,77 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+  /* display: flex; */
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.membership-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px;
+  width: 100%;
+  border-radius: 5px;
+}
+.membership-card {
+  width: 30%;
+   padding: 20px;
+   border: 1px solid #efe9e9;
+   border-radius: 10px; 
+  text-align: center;
+   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+   background-color: #1d1b1b;">
+}
+.membership-card h4  {
+  font-size: 24px;
+  margin: 10;
+  color: #fffafa;
+}
+.membership-card .price {
+  font-size: 20px;
+  color: #fa9e47;
+  margin-top: 10px;
+  animation: glow-animation 1.5s infinite alternate;
+}
+@keyframes glow-animation {
+  0% {
+    text-shadow: 0 0 5px #0a0a0a, 0 0 10px #070707, 0 0 15px #181618,
+      0 0 20px #0c0b0b, 0 0 25px #0a090a;
+  }
+  100% {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fd812f, 0 0 30px #ff944d,
+      0 0 40px #ffb14c, 0 0 50px #ffb553;
+  }
+}
+.membership-card .duration {
+  font-size: 16px;
+  color: #fdf7f7;
+  margin-top: 5px;
+}
+.membership-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+.hover-info {
+  display: none;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  padding: 10px;
+  border-radius: 5px;
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  right: 20px;
+  font-size: 14px;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+.membership-card:hover .hover-info {
+  display: block;
+  opacity: 1;
+}

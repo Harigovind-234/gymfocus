@@ -1,0 +1,22 @@
+document.addEventListener('DOMContentLoaded', () => {
+    // Existing function declarations
+
+    document.querySelector('.decrement').addEventListener('click', () => updateQuantity(-1));
+    document.querySelector('.increment').addEventListener('click', () => updateQuantity(1));
+
+    document.getElementById('quantity').addEventListener('change', function() {
+        const maxStock = <?php echo $product['stock']; ?>;
+        if (this.value > maxStock) {
+            this.value = maxStock;
+            Swal.fire({
+                icon: 'warning',
+                title: 'Maximum Stock Limit',
+                text: `Only ${maxStock} items available in stock.`
+            });
+        }
+        if (this.value < 1) {
+            this.value = 1;
+        }
+        updateTotalPrice();
+    });
+});

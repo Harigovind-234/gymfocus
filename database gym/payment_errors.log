@@ -1,0 +1,103 @@
+[2025-04-07 09:22:55] Payment data received: payment_id=pay_QG5F5SS4ErWQ9Q, user_id=91, amount=3450, is_new_member=1
+[2025-04-07 09:32:33] Payment data received: payment_id=pay_QG5PK8xHyd3omP, user_id=91, amount=900, is_new_member=0
+[2025-04-07 09:32:34] Executing SQL: INSERT INTO memberships (
+                user_id, 
+                email, 
+                joining_date, 
+                last_payment_date, 
+                next_payment_date, 
+                membership_status, 
+                payment_amount, 
+                payment_type, 
+                payment_status, 
+                payment_method, 
+                transaction_id, 
+                rate_joining_fee, 
+                rate_monthly_fee, 
+                rate_updated_at,
+                rate_updated_by
+            ) VALUES (
+                91, 
+                'rajesh@gmail.com', 
+                '2025-04-07', 
+                '2025-04-07', 
+                '2025-05-07', 
+                'active', 
+                900, 
+                'monthly', 
+                'completed', 
+                'razorpay', 
+                'pay_QG5PK8xHyd3omP', 
+                2000, 
+                999, 
+                NOW(),
+                91
+            )
+[2025-04-07 12:48:01] Payment data received: payment_id=pay_QG8jr6S9GnprTm, user_id=91, amount=3450, is_new_member=1
+[2025-04-07 12:48:01] Executing SQL: INSERT INTO memberships (
+                user_id, 
+                email, 
+                joining_date, 
+                last_payment_date, 
+                next_payment_date, 
+                membership_status, 
+                payment_amount, 
+                payment_type, 
+                payment_status, 
+                payment_method, 
+                transaction_id, 
+                rate_joining_fee, 
+                rate_monthly_fee, 
+                rate_updated_at,
+                rate_updated_by
+            ) VALUES (
+                91, 
+                'albin@gmail.com', 
+                '2025-04-07', 
+                '2025-04-07', 
+                '2025-05-07', 
+                'active', 
+                3450, 
+                'joining', 
+                'completed', 
+                'razorpay', 
+                'pay_QG8jr6S9GnprTm', 
+                2000, 
+                999, 
+                NOW(),
+                91
+            )
+[2025-04-07 15:22:15] Payment data received: payment_id=pay_QGBMkquURRU6Cc, user_id=92, amount=2900, is_new_member=1
+[2025-04-07 15:22:15] Executing SQL: INSERT INTO memberships (
+                user_id, 
+                email, 
+                joining_date, 
+                last_payment_date, 
+                next_payment_date, 
+                membership_status, 
+                payment_amount, 
+                payment_type, 
+                payment_status, 
+                payment_method, 
+                transaction_id, 
+                rate_joining_fee, 
+                rate_monthly_fee, 
+                rate_updated_at,
+                rate_updated_by
+            ) VALUES (
+                92, 
+                'manu@gmail.com', 
+                '2025-04-07', 
+                '2025-04-07', 
+                '2025-05-07', 
+                'active', 
+                2900, 
+                'joining', 
+                'completed', 
+                'razorpay', 
+                'pay_QGBMkquURRU6Cc', 
+                2000, 
+                999, 
+                NOW(),
+                92
+            )

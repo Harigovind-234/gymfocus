@@ -1,0 +1,7 @@
+{
+  "name": "focus/gym",
+  "description": "Focus Gym Management System",
+  "require": {
+    "razorpay/razorpay": "^2.8"
+  }
+}

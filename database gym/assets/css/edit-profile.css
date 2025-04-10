@@ -1,0 +1,263 @@
+/* Profile Section Styles */
+.profile-section {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  background: rgba(35, 35, 35, 0.95);
+  border-radius: 15px;
+  box-shadow: 0 5px 25px rgba(237, 86, 59, 0.2);
+}
+
+/* Profile Header Styles */
+.profile-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background: linear-gradient(145deg, #2d2d2d, #1a1a1a);
+  border-radius: 15px;
+  margin-bottom: 30px;
+  border: 1px solid rgba(237, 86, 59, 0.2);
+}
+
+/* Profile Avatar Styles - Updated */
+.profile-avatar {
+  position: relative;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 3px solid #ed563b;
+  box-shadow: 0 0 20px rgba(237, 86, 59, 0.3);
+  background: linear-gradient(45deg, #2d2d2d, #1a1a1a);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.profile-avatar .upload-icon {
+  color: #ed563b;
+  font-size: 24px;
+  z-index: 2;
+}
+
+.profile-avatar::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(45, 45, 45, 0.9);
+  z-index: 1;
+  transition: background 0.3s ease;
+}
+
+.profile-avatar:hover {
+  transform: scale(1.05);
+}
+
+.profile-avatar:hover .upload-icon {
+  transform: scale(1.1);
+  color: #ff7d6b;
+}
+
+.profile-avatar:hover::before {
+  background: rgba(45, 45, 45, 0.7);
+}
+
+/* Profile Info Styles */
+.profile-info {
+  margin-left: 20px;
+  flex: 1;
+}
+
+.profile-info h2 {
+  color: #ed563b;
+  margin: 0 0 5px 0;
+  font-size: 1.8em;
+}
+
+.member-since {
+  color: #aaa;
+  font-size: 0.9em;
+}
+
+/* Profile Cards */
+.profile-card {
+  background: linear-gradient(145deg, #2d2d2d, #1a1a1a);
+  border-radius: 15px;
+  padding: 25px;
+  margin-bottom: 20px;
+  border: 1px solid rgba(237, 86, 59, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.profile-card:hover {
+  transform: translateY(-5px);
+}
+
+.profile-card h4 {
+  color: #ed563b;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid rgba(237, 86, 59, 0.2);
+}
+
+.profile-card p {
+  color: #fff;
+  margin: 10px 0;
+}
+
+.profile-card strong {
+  color: #ed563b;
+}
+
+/* Modal Styles */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.85);
+  animation: fadeIn 0.3s ease;
+}
+
+.modal-content {
+  background: linear-gradient(145deg, #1a1a1a, #2d2d2d);
+  margin: 5vh auto;
+  width: 90%;
+  max-width: 600px;
+  border-radius: 15px;
+  position: relative;
+  animation: slideUp 0.3s ease;
+}
+
+/* Form Styles */
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  color: #ed563b;
+  margin-bottom: 8px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(237, 86, 59, 0.3);
+  border-radius: 8px;
+  color: white;
+}
+
+/* Button Styles */
+.edit-button,
+.save-btn {
+  background: linear-gradient(45deg, #ed563b, #ff7d6b);
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.edit-button:hover,
+.save-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(237, 86, 59, 0.3);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .profile-header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .profile-info {
+    margin: 15px 0;
+    text-align: center;
+  }
+
+  .profile-card {
+    margin: 10px;
+  }
+}
+
+/* Add these styles to your existing CSS */
+.avatar-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: relative;
+  z-index: 1;
+}
+
+.avatar-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 2;
+}
+
+.profile-avatar:hover .avatar-overlay {
+  opacity: 1;
+}
+
+.avatar-overlay i {
+  color: white;
+  font-size: 24px;
+}
+
+/* Form validation styles */
+.form-group input:invalid,
+.form-group select:invalid,
+.form-group textarea:invalid {
+  border-color: #ff4444;
+}
+
+.form-group input:focus:invalid,
+.form-group select:focus:invalid,
+.form-group textarea:focus:invalid {
+  box-shadow: 0 0 0 2px rgba(255, 68, 68, 0.2);
+}

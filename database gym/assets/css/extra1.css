@@ -1,0 +1,9 @@
+/* Ensure compatibility by adding the standard property */
+input,
+button,
+select,
+textarea {
+  -webkit-appearance: none; /* For WebKit browsers */
+  -moz-appearance: none; /* For Firefox */
+  appearance: none; /* Standard property */
+}
